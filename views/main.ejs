@@ -1,0 +1,35 @@
+<html>
+<head>
+<title>Display Quotes</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <link rel='stylesheet' href='style.css' />
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-md-offset-3">
+                <div class="panel panel-info">
+                    <div class="panel-heading">
+                        <h1 id="header" class="panel-title">Here are the awesome quotes!</h1>
+                    </div>
+                    <div class="panel-body">
+                    <% for (var x in quotes) { %>
+                        <p><strong><%=quotes[x].quote%></strong></p>
+                        <p class="pull-left"><%=quotes[x].name%></p>
+                        <p class="pull-right">at <%=quotes[x].date.toDateString()%></p><br>
+                        <hr>
+                    <% } %> 
+                    <a href="/"><button class="btn btn-primary pull-right">Go Back</button></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+</body>
+</html>

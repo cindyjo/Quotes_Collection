@@ -1,0 +1,11 @@
+body {
+	padding-top: 50px;
+}
+#header {
+	font-size: 200%;
+}
+.error {
+	color: red;
+	line-height: 5px;
+	font-size: 90%;
+}
